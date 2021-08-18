@@ -13,8 +13,10 @@ html {
 
 @import 'layout';
 @import 'headernavbar';
-@import 'signin';
-@import 'signup';
+@import 'auth/signin';
+@import 'auth/signup';
+
+@import 'page-title';
 
 
 
