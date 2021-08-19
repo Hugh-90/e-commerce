@@ -13,26 +13,16 @@ html {
 
 @import 'layout';
 @import 'headernavbar';
-@import 'auth/signin';
-@import 'auth/signup';
+@import 'signin';
+@import 'signup';
 
 @import 'page-title';
+@import "form-fields";
 
 
 
 
 body {
-    overflow-x: hidden;
-    font-weight: normal;
-
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    text-rendering: optimizeLegibility;
-    -webkit-tap-highlight-color: transparent;
-}
-
-.app {
-    margin-top: 2rem;
-    display: grid;
-    justify-items: center;
+    font-family: "Open Sans";
+    color: #808080;
 }
