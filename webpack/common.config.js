@@ -1,47 +1,57 @@
 // webpack plugins
-const SplitChunksPlugin = require('webpack/lib/optimize/SplitChunksPlugin');
+const CommonsChunkPlugin = require('webpack/lib/optimize/CommonsChunkPlugin');
 
 module.exports = {
+
   entry: {
-    app: ['./src/bootstrap.js'],
-    vendor: './src/vendor.js',
+    'app': [
+      './src/bootstrap.js'
+    ],
+    'vendor': './src/vendor.js'
   },
 
   resolve: {
+
     extensions: ['.js', '.scss'],
 
-    modules: ['node_modules'],
+    modules: ['node_modules']
+
   },
 
   module: {
+
     rules: [
+
       {
         test: /\.js$/,
         exclude: /node_modules/,
-        use: ['babel-loader'],
+        use: ['babel-loader']
       },
 
       {
-        type: 'javascript/auto',
+        test: /\.json$/,
+        loader: 'json'
+      },
+
+      {
         test: /\.(jpg|png|gif|eot|svg|ttf|woff|woff2)$/,
-        loader: 'file-loader',
-        options: {
-          name: '[path][name].[ext]',
-          publicPath: '/',
-        },
+        loader: 'file',
       },
 
       {
         test: /\.(mp4|webm)$/,
-        loader: 'url?limit=10000',
-      },
-    ],
+        loader: 'url?limit=10000'
+      }
+
+    ]
+
   },
 
   plugins: [
-    new SplitChunksPlugin({
+    new CommonsChunkPlugin({
       name: ['app', 'vendor'],
-      minChunks: Infinity,
-    }),
-  ],
+      minChunks: Infinity
+    })
+  ]
+
 };
