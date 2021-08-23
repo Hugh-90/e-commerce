@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 
 import PageTitle from "../pageTitle";
 import Purchases from './purchases';
-import PurchaesDetail from './purchasesDetail';
+import PurchaseDetail from './purchasesDetail';
 
 class PurchaseHistory extends Component {
     render () {
