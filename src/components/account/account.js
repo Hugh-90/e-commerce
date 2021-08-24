@@ -4,7 +4,7 @@ import { connect } from 'react-redux';
 import * as actions from '../../actions';
 
 import AccountInformation from './accountInformation';
-import PurchaseHistory from './purhaseHistory';
+import PurchaseHistory from './purchaseHistory';
 
 class Account extends Component {
 

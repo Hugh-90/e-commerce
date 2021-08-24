@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 import { reduxForm, Field } from 'redux-form';
 
 import { FormInput, FormButton } from '../formFields';
-import Details from '../details';
+import Details from '../details.js';
 
 import history from '../../history';
 

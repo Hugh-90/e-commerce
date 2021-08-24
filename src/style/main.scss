@@ -11,14 +11,24 @@ html {
     box-sizing: inherit;
 }
 
+body {
+    font-family: "Open Sans";
+    color: #808080;
+
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+    -webkit-tap-highlight-color: transparent;
+}
+
 @import 'layout';
 @import 'headernavbar';
-@import 'signin';
-@import 'signup';
-
 @import 'page-title';
 @import "form-fields";
-@import "details";
+@import "detail";
+
+@import 'signin';
+@import 'signup';
 
 @import "account/account-information";
 @import "account/purchase-history";
@@ -27,7 +37,3 @@ html {
 
 
 
-body {
-    font-family: "Open Sans";
-    color: #808080;
-}
