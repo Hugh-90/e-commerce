@@ -23,9 +23,9 @@ class Navbar extends Component {
 
 function mapStateToProps(state) {
     const {navbarLinks} = state.headerNavbar;
-    return {
+    return (
         navbarLinks
-    }
+    )
 }
 
 Navbar = connect(mapStateToProps, actions)(Navbar);

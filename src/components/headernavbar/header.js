@@ -26,9 +26,9 @@ class Header extends Component {
 
 function mapStateToProps(state) {
     const{ headerLinks } = state.headerNavbar;
-    return {
+    return (
         headerLinks
-    }
+    )
 }
 
 Header = connect(mapStateToProps)(Header);

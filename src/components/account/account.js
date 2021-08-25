@@ -63,8 +63,8 @@ class Account extends Component {
     }
 }
 function mapStateToProps(state) {
-    const {HeaderLinks, navbarLinks} =state.headerNavbar;
-    return {HeaderLinks, navbarLinks};
+    const {HeaderLinks, navbarLinks} = state.headerNavbar;
+    return (HeaderLinks, navbarLinks);
 }
 
 Account = connect(mapStateToProps, actions)(Account);
