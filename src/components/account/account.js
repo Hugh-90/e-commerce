@@ -12,14 +12,14 @@ class Account extends Component {
 
         const headerLinks = [
             {
-            _id: 0,
-            title: "Shop",
-            path: "/shop"
+                _id: 0,
+                title: 'Shop',
+                path: '/shop'
             },
             {
-            _id: 1,
-            title: "Logout",
-            path: "/"
+                _id: 1,
+                title: 'Logout',
+                path: '/'
             }
         ]
 
@@ -42,29 +42,30 @@ class Account extends Component {
         this.props.setNavbarLinks(navbarLinks);
     }
 
-    renderContent(){
+    renderContent() {
         let jsx;
         if(this.props.navbarLinks) {
-            this.props.navbarLinks.map(link => {
-               if(link.active) {
-                   jsx = link.component;
-               } 
+            this.props.navbarLinks.forEach(link => {
+                if(link.active) {
+                    jsx = link.component;
+                }
             })
         }
         return jsx;
     }
 
-    render () {
+    render() {
         return (
-            <div className="account">
-                {this.renderContent()}
+            <div className='account'>
+                { this.renderContent() }
             </div>
         )
     }
 }
+
 function mapStateToProps(state) {
-    const {HeaderLinks, navbarLinks} = state.headerNavbar;
-    return (HeaderLinks, navbarLinks);
+    const { headerLinks, navbarLinks } = state.headerNavbar;
+    return { headerLinks, navbarLinks }
 }
 
 Account = connect(mapStateToProps, actions)(Account);

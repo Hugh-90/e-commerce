@@ -41,12 +41,20 @@ class SignInForm extends Component {
                 placeholder='Password'
                 name='password'
                 component={FormInput}/>
+
                 <div className="sign-in-form__line"></div>
                 <Field className='sign-in-form__login'
                 onClick={() => history.push("/account")}
                 type='submit'
                 title='Login'
                 name='login'
+                component={FormButton}/>
+                <Field className='sign-in-form__back'
+                onClick={() => history.push("/signin")}
+                type='button'
+                title='Back'
+                name='back'
+                short={true}
                 component={FormButton}/>
                 <Details className="sign-in-form__details" title="Quicklinks" links={links}/>
             </form>
